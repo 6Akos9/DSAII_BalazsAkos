@@ -30,5 +30,47 @@ int main() {
         cout << "Nincs ilyen szam a tombben." << endl;
     }
 
+    cout << "A tomb rendezes elott: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    selection_sort(arr, n);
+
+    cout << "A tomb rendezes utnan: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    cout << "A tomb rendezes elott: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    minimselection_sort(arr, n);
+
+    cout << "A tomb rendezes utnan: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    cout << "A tomb rendezes elott: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    bubble_sort(arr, n);
+
+    cout << "A tomb rendezes utnan: ";
+    for (int i = 0; i < n; ++i) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
     return 0;
 }

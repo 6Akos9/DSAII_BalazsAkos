@@ -76,3 +76,43 @@ int binarySearch(const int *array, int size, int target) {
     }
     return -1;
 }
+
+void selection_sort(int *a, int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        int min_index = i;
+        for (int j = 0; j < n; ++j) {
+            if(a[j] < a[min_index]){
+                min_index = j;
+            }
+        }
+        int temp = a[i];
+        a[i] = a[min_index];
+        a[min_index] = temp;
+    }
+}
+
+void minimselection_sort(int *a, int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        int min_index = i;
+        for (int j = 0; j < n; ++j) {
+            if(a[j] < a[min_index]){
+                min_index = j;
+            }
+        }
+        int temp = a[i];
+        a[i] = a[min_index];
+        a[min_index] = temp;
+    }
+}
+
+void bubble_sort(int *a, int n) {
+    for (int i = 0; i < n - 1; ++i) {
+        for (int j = 0; j < n - i - 1; ++j) {
+            if (a[j] > a[j + 1]){
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+}
