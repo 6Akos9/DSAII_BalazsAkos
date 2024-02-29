@@ -73,7 +73,5 @@ int main() {
     cout << endl;
 
     reverse_odd(arr, n);
-
-
     return 0;
 }
