@@ -116,3 +116,11 @@ void bubble_sort(int *a, int n) {
         }
     }
 }
+
+void reverse_odd(int *a, int n) {
+    for (int i = n; i >= 0; --i) {
+        if(a[i] % 2 != 0){
+            cout << a[i] << " ";
+        }
+    }
+}
