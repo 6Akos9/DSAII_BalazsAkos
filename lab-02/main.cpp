@@ -12,5 +12,11 @@ int main() {
     cout << endl;
 
     cout << "A tomb maximuma: " << maxArrayRec(arr, size - 1, arr[0]) << endl;
+    cout << "A tomb elemeinek a legnagyobb kozos osztoja: " << lnkoArrayRec(arr, size - 1) << endl;
+
+    int number = 74938926;
+    digitsNumberRec(number);
+
+    cout << "A szam inverze: " << inverseNumber(number, 0) << endl;
     return 0;
 }

@@ -18,7 +18,7 @@ void printArrayRec(int *a, int n);
 int sumArrayRec(int *a, int n);
 int maxArrayRec(int *a, int n, int max);
 int lnkoArrayRec(int *a, int n);
-void digitNumbers(int n);
+void digitsNumberRec(int n);
 int inverseNumber(int n,int fn);
 
 #endif //LAB_02_FUNCTIONS_H

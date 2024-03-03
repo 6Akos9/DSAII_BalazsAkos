@@ -65,3 +65,33 @@ int maxArrayRec(int *a, int n, int max) {
         return maxArrayRec(a, n - 1, max);
     }
 }
+
+int lnkoArrayRec(int *a, int n) {
+    if(n == 0){
+        return a[0];
+    }else{
+        return lnkoRec(a[n], lnkoArrayRec(a, n - 1));
+    }
+}
+
+void digitsNumberRec(int n) {
+    if(n < 0) n = -n;
+    static int count = 0;
+    if(n == 0){
+        cout << "A szamjegyek szama: " << count << endl;
+        count = 0;
+    }else{
+        count++;
+        digitsNumberRec(n/10);
+    }
+}
+
+int inverseNumber(int n, int fn) {
+    if(n == 0){
+        return fn;
+    }else{
+        int digit = n % 10;
+        fn = fn * 10 + digit;
+        return inverseNumber(n / 10, fn);
+    }
+}
