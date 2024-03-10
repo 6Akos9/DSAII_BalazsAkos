@@ -77,4 +77,14 @@ void mergeSort(int *array, int begin, int end) {
     }
 }
 
+int findMax(int *array, int left, int right) {
+    if(left == right){
+        return array[left];
+    }
+    int mid = (left + right) / 2;
+    int maxLeft = findMax(array, left, mid);
+    int maxRight = findMax(array, mid + 1, right);
+    return max(maxLeft, maxRight);
+}
+
 

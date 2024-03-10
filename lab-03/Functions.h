@@ -16,5 +16,6 @@ int countPositiveRec(int *a, int n);
 int countNegativeRec(int *a, int n);
 void mergeSort(int array[], int begin, int end);
 void merge(int *array, int left, int mid, int right);
+int findMax(int array[], int left, int right);
 
 #endif //LAB_03_FUNCTIONS_H
