@@ -17,9 +17,12 @@ int main() {
     /*cout << endl;
     cout << "Pozitiv szamok: " << countPositiveRec(array, n) << endl;
     cout << "Negativ szamok: " << countNegativeRec(array, n);*/
-    mergeSort(array, 0, n - 1);
-    printArrayRec(array, n - 1);
+    //mergeSort(array, 0, n - 1);
+    /*printArrayRec(array, n - 1);
     int maxElement = findMax(array, 0, n - 1);
-    cout << endl << "A tomb maximuma: " << maxElement << endl;
+    cout << endl << "A tomb maximuma: " << maxElement << endl;*/
+
+    quicksort(array, 0, n-1);
+    printArrayRec(array, n-1);
     return 0;
 }

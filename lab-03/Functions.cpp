@@ -87,4 +87,32 @@ int findMax(int *array, int left, int right) {
     return max(maxLeft, maxRight);
 }
 
+void quicksort(int *array, int i, int j) {
+    int k;
+    if(i < j){
+        k= szetvalogat(array, i, j);
+        quicksort(array, i, k-1);
+        quicksort(array, k+1, j);
+    }
+}
+
+int szetvalogat(int *array, int bal, int jobb) {
+    int pivot;
+    pivot = array[bal];
+    int i = bal - 1;
+    int j = jobb + 1;
+    do {
+        do {
+            j--;
+        }while(array[j] > pivot);
+        do {
+            i++;
+        }while(array[i] < pivot);
+        if(i < j){
+            swap(array[i], array[j]);
+        }
+    }while(i < j);
+    return j;
+}
+
 
