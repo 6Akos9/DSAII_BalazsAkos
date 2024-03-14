@@ -20,3 +20,4 @@ void kiir(int *x, int n) {
     }
     cout << endl;
 }
+

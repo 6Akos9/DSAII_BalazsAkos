@@ -7,4 +7,5 @@ int main() {
     a = new int [n];
     BT(a, n, 0);
     return 0;
+
 }
