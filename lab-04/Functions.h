@@ -7,7 +7,7 @@
 #include <iostream>
 using namespace std;
 
-void BT(int *x, int n, int k);
+void BT(int *x, int n, int k, int &combinationCount);
 void kiir(int *x, int n);
 
 

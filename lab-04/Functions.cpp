@@ -4,12 +4,13 @@
 
 #include "Functions.h"
 
-void BT(int *x, int n, int k) {
+void BT(int *x, int n, int k, int &combinationCount) {
     for(x[k] = 0; x[k] <= 9; x[k]++){
         if(k < n - 1){
-            BT(x, n, k+1);
+            BT(x, n, k+1, combinationCount);
         }else{
             kiir(x, n);
+            combinationCount++;
         }
     }
 }
