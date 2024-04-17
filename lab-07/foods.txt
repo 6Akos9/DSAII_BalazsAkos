@@ -1,0 +1,6 @@
+spenotos_gomba 200
+zoldseg_a_lerben 250
+dioval_toltott_korte 300
+vanilias_es_kokuszos_Panna_cotta 400
+fuges_salata 350
+citromtorta 500

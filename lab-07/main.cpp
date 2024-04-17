@@ -15,5 +15,18 @@ int main() {
     S = BT(a, 0, 0, n, 0 ,S);
 
     cout << "A legkisebb osszeg: " << S;
+
+    cout << "\n**************************************************\n" << endl;
+
+    vector<Food> foods = readFoodsFromFile("foods.txt");
+
+    int maxCalories = 1000;
+
+    vector<pair<string, int>> menu = selectMenu(foods, maxCalories);
+
+    cout << "Panna menuje:\n";
+    for (int i=0;i < menu.size(); ++i) {
+        cout << "- " << menu[i].first << " " << menu[i].second << " kcal " <<endl;
+    }
     return 0;
 }
