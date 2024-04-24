@@ -1,7 +1,21 @@
 #include "Functions.h"
 
 int main() {
-    ifstream inputFile("input.txt");
+    //1.FELADAT
+    ifstream inputFile("input2.txt");
+    int target;
+    inputFile >> target;
+    vector<int> numbers;
+    int num;
+    while(inputFile >> num){
+        numbers.push_back(num);
+    }
+    vector<int> current;
+    backtracking(numbers, target, current, 0, 0);
+    inputFile.close();
+
+    //2.FELADAT
+    /*ifstream inputFile("input.txt");
     int n;
     inputFile >> n;
     vector<Exam> exams(n);
@@ -27,6 +41,8 @@ int main() {
         cout << "Megkapja a karorat." << endl;
     }else{
         cout << "Nem kapja meg a karorat." << endl;
-    }
+    }*/
+
+
     return 0;
 }

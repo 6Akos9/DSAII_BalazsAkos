@@ -25,3 +25,29 @@ vector<int> selectExams(const vector<Exam> &exams, double startTime, double endT
 
     return selectedExams;
 }
+
+void backtracking(const vector<int> &numbers, int target, vector<int> &current, int sum, int index) {
+    if (sum == target){
+        printSolution(current);
+        return;
+    }
+    if(sum > target || index >= numbers.size()){
+        return;
+    }
+    for (size_t i = index; i < numbers.size(); ++i) {
+        current.push_back(numbers[i]);
+        backtracking(numbers, target, current, sum + numbers[i], i);
+        current.pop_back();
+    }
+}
+
+void printSolution(const vector<int> &solution) {
+    cout << "[";
+    for (int i = 0; i < solution.size(); ++i) {
+        cout << solution[i];
+        if(i < solution.size() - 1){
+            cout << ",";
+        }
+    }
+    cout << "]" << endl;
+}
