@@ -1,0 +1,13 @@
+6
+Fekete Janos
+34 1 5
+Feher Eva
+28 2 3
+Kicsi Bela
+45 1 8
+Zoltan Anna
+37 2 6
+Demeter Gabor
+29 1 2
+Kovacs Kati
+41 2 7
