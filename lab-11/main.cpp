@@ -2,20 +2,16 @@
 #include "Functions.h"
 
 int main() {
-    ifstream file("bemenet.txt");
-    int n;
-    file >> n;
-    Szemely szemelyek[n];
-    string vezeteknev, keresztnev;
+    int n=6;
+    Person *persons = new Person[n];
+    readPersonsFromFile(persons, n, "bemenet.txt");
     for (int i = 0; i < n; ++i) {
-        file >> vezeteknev >> keresztnev >> szemelyek[i].eletkor >> szemelyek[i].nem >> szemelyek[i].emelet;
-        szemelyek[i].nev = vezeteknev + " " + keresztnev;
+        printPerson(persons[i]);
     }
-    file.close();
-    kiir(szemelyek, n);
-    atlagEletkor(szemelyek, n);
-    sorrend(szemelyek, n);
-    int minimumVarakozasiIdo = minimalisVarakozasiIdo(szemelyek, n);
-    cout << "A minimum varakozasi ido: " << minimumVarakozasiIdo << endl;
+    avarageAgeByGender(persons, n);
+    minimizeWaitTime(persons, n);
+    //generate_solutions(n);
+
+    delete[] persons;
     return 0;
 }
